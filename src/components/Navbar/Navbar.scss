@@ -13,7 +13,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 200;
+  z-index: 10;
 }
 
 .app_navbar {
@@ -161,7 +161,7 @@ body{
 
   .overlay{
     position: fixed;
-    z-index: 20;
+    z-index: 15;
     background-color: rgba(0, 0, 0, 0.5);
     left: 0;
     top: 0;
@@ -180,7 +180,7 @@ body{
   .mobile-links.active {
     
     transition: all 0.3s ease;
-    z-index: 22;
+    z-index: 20;
     right: 0;
     // transition: display 1s ease ;
     // opacity: 1;

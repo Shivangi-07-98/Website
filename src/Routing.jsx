@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -29,8 +29,23 @@ import Hire_Dedicated_Ecommerce_Developers from './components/Hire Us/e-commerce
 import PageNotFound from './components/PageNotFound';
 
 const RouterComponent = () => {
+
+    const Top = () => {
+        const { pathname } = useLocation(); 
+        
+        useEffect(() => {
+        //   window.scrollTo(0, 0);
+          window.scrollTo({top: 0, behaviour: "smooth"});
+        }, [pathname]);
+      
+        return null; 
+      }
+
+
+
     return (
         <Router>
+            <Top />
              <Navbar></Navbar>
                 <Routes>
 
