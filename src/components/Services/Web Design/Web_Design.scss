@@ -735,6 +735,10 @@
       color: white;
       // height: 230px;
       text-align: center;
+
+      p{
+        color: white;
+      }
       @media (max-width: 400px) {
         margin: 0.5rem;
       }

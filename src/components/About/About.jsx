@@ -1,4 +1,14 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 import './About.scss'
 import imgabout2 from './img/about2.png'
 import imgabout3_1 from './img/about3_1.jpg'
@@ -19,6 +29,15 @@ import icon_1 from './img/icon_1.png'
 import icon_2 from './img/icon_2.png'
 import icon_3 from './img/icon_3.png'
 import icon_4 from './img/icon_4.png'
+
+
+import ptr1 from './img/ptr1.jpg'
+import ptr2 from './img/ptr2.jpg'
+import ptr3 from './img/ptr3.jpg'
+import ptr4 from './img/ptr4.jpg'
+import ptr5 from './img/ptr5.jpg'
+import ptr6 from './img/ptr6.jpg'
+
 
 function About() {
   return (
@@ -51,9 +70,10 @@ function About() {
             </p>
             <div className='about2list'>
               <ul>
-                <li><i class="fa fa-check"></i><strong>Our mission</strong>is to be a socially responsible organization with a focus on people—an organization that inspires its team members to deliver outstanding technology
+                <li><i class="fa fa-check"></i><strong>Our mission - </strong>is to be a socially responsible organization with a focus on people—an organization that inspires its team members to deliver outstanding technology
                   interventions that help our clients complete their digital transformation.</li>
-                <li><i class="fa fa-check"></i><strong>Vision</strong>“You never change things by fighting the existing reality. To change
+
+                <li><i class="fa fa-check"></i><strong>Vision - </strong>“You never change things by fighting the existing reality. To change
                   something, build a new model that makes the existing model obsolete.”―
                   <strong>Buckminster Fuller.</strong></li>
               </ul>
@@ -225,7 +245,7 @@ function About() {
         <div className='about6section'>
 
           <div className='about6section_left'>
-            {/* <div> */}
+            <div className='inputs'>
             <div>
               <input type="text" placeholder="Name" />
             </div>
@@ -242,41 +262,103 @@ function About() {
               <input type="text" placeholder="Subject" />
             </div>
 
+            
+            </div>
+
             <div >
               <textarea placeholder="Your Message Here"></textarea>
             </div>
 
             <div className='submit'>
-              <input type="submit"/><span></span>
+              <input type="submit"/>
             </div>
-            {/* </div> */}
+
           </div>
 
           <div className='about6section_right'>
-            <div>
+
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={50}
+            
+            // centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            fade={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+            
+          >
+            <SwiperSlide>
+            <div className="item">
               <i className="fa fa-quote-left"></i>
               <p>Eighteen Pixels did a great job working on a very tough project that saved me a great deal of
                 headache. The team is flexible to meet the spirit of project goals, not only defined
                 deliverables.</p>
               <div className='name'>Anand Kumar <br/>Manager</div>
             </div>
+            </SwiperSlide>
 
-            {/* <div className="item">
+            <SwiperSlide>
+            <div className="item">
               <i className="fa fa-quote-left"></i>
               <p>18Pixels was very helpful in re-creating our restaurant app from the ground up and providing
                 the best solutions to build an app that our customers deserved. They were also great with
                 communication. Highly recommend!</p>
-              <div>Yogesh Meshram<br/>CEO & Founder</div>
-            </div> */}
+              <div className='name'>Yogesh Meshram<br/>CEO & Founder</div>
+            </div>
+            </SwiperSlide>
+            </Swiper>
           </div>
 
         </div>
 
       </div>
 
+      
+      <div className='WebDesign13'>
+        <h2>MEMBERS & PARTNERS</h2>
 
+        <Swiper
+            slidesPerView={5}
+            spaceBetween={50}
+            
+            // centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
+            fade={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
 
-
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+            
+          >
+            
+        <div className='images'>
+        <SwiperSlide><img src={ptr1} alt=''></img></SwiperSlide>
+          <SwiperSlide><img src={ptr3} alt=''></img></SwiperSlide>
+          <SwiperSlide><img src={ptr4} alt=''></img></SwiperSlide>
+          <SwiperSlide><img src={ptr2} alt=''></img></SwiperSlide>
+          <SwiperSlide><img src={ptr5} alt=''></img></SwiperSlide>
+          <SwiperSlide><img src={ptr6} alt=''></img></SwiperSlide>
+        </div>
+        
+      </Swiper>
+      </div>
 
 
     </div>
