@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home'
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
+import ProjectsNew from './components/Projects New/ProjectsNew';
 import Team from './components/Team/Team';
 import Career from './components/Career/Career';
 import Contact from './components/Contact/Contact';
@@ -26,7 +27,39 @@ import Hire_Dedicated_ios_Developers from './components/Hire Us/ios-developers/H
 import Hire_Dedicated_php_Developers from './components/Hire Us/php-developers/Hire_Dedicated_php_Developers';
 import Hire_Dedicated_Ecommerce_Developers from './components/Hire Us/e-commerce-developers/Hire_Dedicated_Ecommerce_Developers';
 
+// subProjects
+import NBTC from './components/Projects/subProjects/NBTC/NBTC'
+import Figo from './components/Projects/subProjects/FIGO/figo'
+import Lmrcl from './components/Projects/subProjects/LMRCL/Lmrcl'
+import Spiritual from './components/Projects/subProjects/Ind-Spiritual/spiritual'
+import Covid from './components/Projects/subProjects/Covid-19/covid'  
+import University from './components/Projects/subProjects/Allahabad University/university'  
+import Pixstory from './components/Projects/subProjects/Pixstory/pixstory'  
+import Capitalfirst from './components/Projects/subProjects/Capital-first/capital'  
+import Bcpm from './components/Projects/subProjects/Bcpm-Mis/bcpm'  
+import Letzpay from './components/Projects/subProjects/Letzpay/letzpay'  
+import Khadi from './components/Projects/subProjects/Khadi-India/khadi'
+import Digital from './components/Projects/subProjects/Te-Digital-Market-Place/te_digital'
+import Lsesp from './components/Projects/subProjects/LSESP/Lsesp'
+import Lehren from './components/Projects/subProjects/Lehren/lehren'
+import Rozana from './components/Projects/subProjects/Rozana/rozana'
+import Poptv from './components/Projects/subProjects/Poptv/poptv'
+import Ada from './components/Projects/subProjects/Ada/ada'
+import Abacus from './components/Projects/subProjects/Abacus/abacus'
+import Krisin from './components/Projects/subProjects/Krisin/krisin'
+import Academia from './components/Projects/subProjects/Academia/academia'
+import Fhh from './components/Projects/subProjects/First-hand-holding/fhh'
+import Descon from './components/Projects/subProjects/Descon/descon'
+import Chashmewala from './components/Projects/subProjects/Abc-Chashmewala/chashmewala'
+import Gramik from './components/Projects/subProjects/Gramik/gramik'  
+import Aviom from './components/Projects/subProjects/Aviom/aviom'  
+import Rdx from './components/Projects/subProjects/RDX/rdx'  
+
 import PageNotFound from './components/PageNotFound';
+
+// tag inside element should be in capital
+// and because of this word written after import should also be in capital 
+// because both should match
 
 const RouterComponent = () => {
 
@@ -61,7 +94,36 @@ const RouterComponent = () => {
                                 <Route path="enterprise-software" element={<Enterprise_Software_Development />} />
                         
                     
-                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/projects" element={<Projects />}/>
+                                <Route path="/nbtc" element={<NBTC />} />
+                                <Route path="/figo-gyn" element={<Figo />} />
+                                <Route path="/upmrc" element={<Lmrcl />} />
+                                <Route path="/ind-spiritual" element={<Spiritual />} />
+                                <Route path="/covid-19" element={<Covid />} />
+                                <Route path="/allahabad-university" element={<University />} />
+                                <Route path="/pixstory" element={<Pixstory />} />
+                                <Route path="/capital-first" element={<Capitalfirst />} />
+                                <Route path="/bcpm-mis" element={<Bcpm />} />
+                                <Route path="/letzpay" element={<Letzpay />} />
+                                <Route path="/khadi-india" element={<Khadi />} />
+                                <Route path="/te-digital-market-place" element={<Digital />} />
+                                <Route path="/lsesp" element={<Lsesp />} />
+                                <Route path="/lehren" element={<Lehren />} />
+                                <Route path="/rozana" element={<Rozana />} />
+                                <Route path="/poptv" element={<Poptv />} />
+                                <Route path="/ada-chikan" element={<Ada />} />
+                                <Route path="/abacus" element={<Abacus />} />
+                                <Route path="/krisin" element={<Krisin />} />
+                                <Route path="/academia" element={<Academia />} />
+                                <Route path="/fhh" element={<Fhh />} />
+                                <Route path="/descon" element={<Descon />} />
+                                <Route path="/abc-chashmewala" element={<Chashmewala />} />
+                                <Route path="/gramik" element={<Gramik />} />
+                                <Route path="/aviom" element={<Aviom />} />
+                                <Route path="/rdx-play" element={<Rdx />} />
+                    {/* </Route> */}
+
+                    <Route path="/projects-new" element={<ProjectsNew />}/>
                     <Route path="/team" element={<Team />} />
                     <Route path="/career" element={<Career />} />
 
@@ -80,4 +142,7 @@ const RouterComponent = () => {
     );
 };
 
-export default RouterComponent;
+export default RouterComponent
+// tag inside element should be in capital
+// and because of this next word after import should also be in capital 
+// because both should match
